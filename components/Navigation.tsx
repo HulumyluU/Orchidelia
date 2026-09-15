@@ -9,12 +9,12 @@ export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Book', href: '/book' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Головна', href: '/' },
+    { name: 'Про нас', href: '/about' },
+    { name: 'Портфоліо', href: '/portfolio' },
+    { name: 'Бронювання', href: '/book' },
+    { name: 'Контакти', href: '/contact' },
+    { name: 'Блог', href: '/blog' },
   ];
 
   return (

@@ -21,31 +21,31 @@ export default function BookingConfirmed() {
             </svg>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Booking Confirmed!
+            Бронювання підтверджено!
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Your photography session has been successfully booked. We look forward to seeing you!
+            Ваш фотосеанс успішно заброньовано. Чекаємо на вас!
           </p>
         </div>
 
         <div className="bg-gray-50 rounded-lg p-8 mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">What's Next?</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Що далі?</h2>
           <ul className="text-left space-y-3 text-gray-600">
             <li className="flex items-start">
               <span className="text-green-600 mr-3">✓</span>
-              You'll receive a confirmation email with all the details
+              Ви отримаєте лист підтвердження з усіма деталями
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-3">✓</span>
-              Please arrive 10 minutes before your scheduled time
+              Будь ласка, прибути за 10 хвилин до запланованого часу
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-3">✓</span>
-              If you need to reschedule, contact us at least 24 hours in advance
+              Якщо вам потрібно змінити час, зв'яжіться з нами принаймні за 24 години
             </li>
             <li className="flex items-start">
               <span className="text-green-600 mr-3">✓</span>
-              Our team will reach out if there are any changes
+              Наша команда зв'яжеться з вами, якщо будуть будь-які зміни
             </li>
           </ul>
         </div>
@@ -55,12 +55,12 @@ export default function BookingConfirmed() {
             href="/"
             className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium text-lg"
           >
-            Return to Home
+            Повернутися на головну
           </Link>
           <div className="text-gray-600">
-            <p>Need to make another booking?</p>
+            <p>Потрібно зробити інше бронювання?</p>
             <Link href="/book" className="text-gray-900 hover:underline">
-              Book another session
+              Забронювати інший сеанс
             </Link>
           </div>
         </div>

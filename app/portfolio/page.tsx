@@ -5,7 +5,7 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen bg-white pt-[72px] md:pt-[80px]">
       <div className="py-16 md:py-24 px-6">
-        <h1 className="page-title">Portfolio</h1>
+        <h1 className="page-title">Портфоліо</h1>
       </div>
 
       <div className="max-w-[1200px] mx-auto px-2 md:px-4 pb-20">

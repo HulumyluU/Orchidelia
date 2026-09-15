@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     // Validate required fields
     if (!name || !email || !phone || !date || !time || !serviceType) {
       return NextResponse.json(
-        { error: 'All required fields must be provided' },
+        { error: 'Всі обов\'язкові поля мають бути заповнені' },
         { status: 400 }
       );
     }
@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     if (existingBooking) {
       return NextResponse.json(
-        { error: 'This time slot is already booked. Please choose another time.' },
+        { error: 'Цей час вже заброньовано. Будь ласка, оберіть інший час.' },
         { status: 409 }
       );
     }
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
 
     if (pendingBooking) {
       return NextResponse.json(
-        { error: 'This time slot is currently pending confirmation. Please choose another time.' },
+        { error: 'Цей час очікує підтвердження. Будь ласка, оберіть інший час.' },
         { status: 409 }
       );
     }
@@ -80,33 +80,33 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: 'Orhideia Photo Studio <onboarding@resend.dev>',
         to: email,
-        subject: 'Confirm Your Booking - Orhideia Photo Studio',
+        subject: 'Підтвердьте ваше бронювання - Orhideia Photo Studio',
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-            <h1 style="color: #333;">Confirm Your Booking</h1>
-            <p>Dear ${name},</p>
-            <p>Thank you for your interest in booking with Orhideia Photo Studio. Please confirm your booking by clicking the button below:</p>
+            <h1 style="color: #333;">Підтвердьте ваше бронювання</h1>
+            <p>Шановний(а) ${name},</p>
+            <p>Дякуємо за ваш інтерес до бронювання в Orhideia Photo Studio. Будь ласка, підтвердьте ваше бронювання, натиснувши кнопку нижче:</p>
             
             <div style="background-color: #f5f5f5; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <p><strong>Service:</strong> ${serviceType}</p>
-              <p><strong>Date:</strong> ${new Date(date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
-              <p><strong>Time:</strong> ${time}</p>
-              <p><strong>Phone:</strong> ${phone}</p>
-              ${notes ? `<p><strong>Notes:</strong> ${notes}</p>` : ''}
+              <p><strong>Послуга:</strong> ${serviceType}</p>
+              <p><strong>Дата:</strong> ${new Date(date).toLocaleDateString('uk-UA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+              <p><strong>Час:</strong> ${time}</p>
+              <p><strong>Телефон:</strong> ${phone}</p>
+              ${notes ? `<p><strong>Примітки:</strong> ${notes}</p>` : ''}
             </div>
             
             <div style="text-align: center; margin: 30px 0;">
               <a href="${confirmationUrl}" style="background-color: #333; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block;">
-                Confirm Booking
+                Підтвердити бронювання
               </a>
             </div>
             
-            <p style="color: #666; font-size: 14px;">This link will expire in 24 hours.</p>
-            <p>If you did not request this booking, please ignore this email.</p>
+            <p style="color: #666; font-size: 14px;">Це посилання діє 24 години.</p>
+            <p>Якщо ви не запитували це бронювання, будь ласка, ігноруйте цей лист.</p>
             
             <p style="color: #666; font-size: 14px; margin-top: 30px;">
               Orhideia Photo Studio<br>
-              123 Photography Lane, Toronto, ON M5H 2N2<br>
+              Збараж, Україна<br>
               info@orhideiaphotostudio.com<br>
               +1 (416) 555-0123
             </p>
@@ -121,14 +121,14 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json(
-      { message: 'Confirmation email sent. Please check your email to confirm your booking.' },
+      { message: 'Лист підтвердження надіслано. Перевірте свою пошту для підтвердження бронювання.' },
       { status: 200 }
     );
   } catch (error: any) {
     console.error('Error in booking API:', error);
 
     return NextResponse.json(
-      { error: error.message || 'Failed to create booking' },
+      { error: error.message || 'Не вдалося створити бронювання' },
       { status: 500 }
     );
   }

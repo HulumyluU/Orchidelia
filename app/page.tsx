@@ -23,10 +23,10 @@ export default function Home() {
       {/* Featured Blog Post Style Section */}
       <section className="py-16 md:py-20 px-6 text-center">
         <p className="text-xs uppercase tracking-ultra text-muted font-light mb-6">
-          July 4, 2026
+          4 липня 2026
         </p>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-light uppercase tracking-widest text-gray-800 max-w-4xl mx-auto leading-relaxed">
-          Top Photography Studios in Toronto, Ontario
+          Найкраща фотостудія в Збаражі
         </h2>
       </section>
 
@@ -38,39 +38,39 @@ export default function Home() {
       {/* Brand Section */}
       <section className="py-16 md:py-24 px-6 text-center max-w-3xl mx-auto">
         <p className="section-label mb-6">
-          Toronto Ontario Wedding Photographer
+          Весільний фотограф Збараж, Україна
         </p>
         <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl uppercase tracking-widest text-gray-800 mb-6 font-normal">
           Orhideia Photography
         </h1>
         <p className="section-label mb-12">
-          Capturing the Authentic You
+          Захоплення вашої справжньої сутності
         </p>
 
         <div className="font-serif text-gray-700 text-base md:text-lg leading-relaxed space-y-8">
           <p>
-            For many, the thought of getting in front of a camera can be daunting.
-            But you deserve to feel comfortable every step of the way.
+            Для багатьох думка про те, щоб опинитися перед камерою, може бути лякаючою.
+            Але ви заслуговуєте на те, щоб почуватися комфортно на кожному етапі.
           </p>
-          <p>So let&apos;s make that happen.</p>
+          <p>Тож давайте зробимо це.</p>
           <p>
-            I encourage individuality, playfulness, and spontaneity to capture your{' '}
-            <strong className="font-semibold">candid emotion</strong>,{' '}
-            <strong className="font-semibold">personality</strong>, and{' '}
-            <strong className="font-semibold">one of a kind connection</strong>.
-            That way you can enjoy every second of this once-in-a-lifetime experience.
+            Я заохочую індивідуальність, грайливість та спонтанність, щоб захопити ваші{' '}
+            <strong className="font-semibold">щирі емоції</strong>,{' '}
+            <strong className="font-semibold">особистість</strong> та{' '}
+            <strong className="font-semibold">унікальний зв&apos;язок</strong>.
+            Таким чином ви зможете насолоджуватися кожною секундою цього незабутнього досвіду.
           </p>
         </div>
 
         <div className="mt-16 flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/book" className="btn-primary inline-block text-center">
-            Book a Session
+            Забронювати сеанс
           </Link>
           <Link
             href="/portfolio"
             className="inline-block text-center px-8 py-3 uppercase text-xs tracking-widest text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white transition-colors font-light"
           >
-            View Portfolio
+            Переглянути портфоліо
           </Link>
         </div>
       </section>

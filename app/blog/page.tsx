@@ -5,39 +5,39 @@ import { placeholderImages } from '@/lib/placeholders';
 const blogPosts = [
   {
     id: 1,
-    title: 'Top Photography Studios in Toronto, Ontario',
-    excerpt: 'Discover the best photography studios in Toronto and what makes each one unique for your special day.',
-    date: 'July 4, 2026',
+    title: 'Найкраща фотостудія в Збаражі',
+    excerpt: 'Відкрийте найкращу фотостудію в Збаражі та що робить її унікальною для вашого особливого дня.',
+    date: '4 липня 2026',
   },
   {
     id: 2,
-    title: '10 Tips for Perfect Portrait Photography',
-    excerpt: 'Learn the essential techniques for capturing stunning portraits that truly reflect your subject\'s personality.',
-    date: 'June 15, 2024',
+    title: '10 порад для ідеальної портретної фотографії',
+    excerpt: 'Вивчіть essential техніки для захоплення приголомшливих портретів, що справді відображають особистість вашого об\'єкта.',
+    date: '15 червня 2024',
   },
   {
     id: 3,
-    title: 'Behind the Scenes: Our Latest Wedding Shoot',
-    excerpt: 'Take a peek behind the curtain as we share the story of capturing a beautiful summer wedding.',
-    date: 'June 10, 2024',
+    title: 'За лаштунками: Наша остання весільна зйомка',
+    excerpt: 'Зазирніть за завісу, коли ми ділимося історією захоплення красивого літнього весілля.',
+    date: '10 червня 2024',
   },
   {
     id: 4,
-    title: 'The Art of Product Photography',
-    excerpt: 'Discover how professional product photography can elevate your brand and increase sales.',
-    date: 'June 5, 2024',
+    title: 'Мистецтво фотографії продуктів',
+    excerpt: 'Відкрийте, як професійна фотографія продуктів може підняти ваш бренд та збільшити продажі.',
+    date: '5 червня 2024',
   },
   {
     id: 5,
-    title: 'Lighting Techniques Every Photographer Should Know',
-    excerpt: 'Master the fundamentals of lighting to take your photography skills to the next level.',
-    date: 'May 20, 2024',
+    title: 'Техніки освітлення, які має знати кожен фотограф',
+    excerpt: 'Опануйте основи освітлення, щоб підняти ваші фотографічні навички на новий рівень.',
+    date: '20 травня 2024',
   },
   {
     id: 6,
-    title: 'Preparing for Your Photo Session',
-    excerpt: 'Everything you need to know to prepare for your upcoming photography session with us.',
-    date: 'May 15, 2024',
+    title: 'Підготовка до вашого фотосеансу',
+    excerpt: 'Все, що вам потрібно знати, щоб підготуватися до вашого майбутнього фотосеансу з нами.',
+    date: '15 травня 2024',
   },
 ];
 
@@ -45,7 +45,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-white pt-[72px] md:pt-[80px]">
       <div className="py-16 md:py-24 px-6">
-        <h1 className="page-title">Blog</h1>
+        <h1 className="page-title">Блог</h1>
       </div>
 
       <div className="max-w-[900px] mx-auto px-6 pb-20 space-y-16 md:space-y-24">
@@ -53,7 +53,7 @@ export default function Blog() {
           <article key={post.id} className="group cursor-pointer">
             <div className="relative w-full h-[240px] md:h-[320px] mb-8 overflow-hidden">
               <Image
-                src={placeholderImages.blog[index].image}
+                src={placeholderImages.blog[index]}
                 alt={post.title}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

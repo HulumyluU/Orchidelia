@@ -36,3 +36,6 @@ next-env.d.ts
 # sensitive files
 update-env.js
 FIle_apis/
+
+# Local Netlify folder
+.netlify

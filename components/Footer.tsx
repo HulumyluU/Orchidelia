@@ -16,10 +16,10 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 md:gap-10 mb-10">
-          {['Home', 'About', 'Portfolio', 'Book', 'Contact', 'Blog'].map((item) => (
+          {['Головна', 'Про нас', 'Портфоліо', 'Бронювання', 'Контакти', 'Блог'].map((item) => (
             <Link
               key={item}
-              href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              href={item === 'Головна' ? '/' : `/${item === 'Про нас' ? 'about' : item === 'Портфоліо' ? 'portfolio' : item === 'Бронювання' ? 'book' : item === 'Контакти' ? 'contact' : 'blog'}`}
               className="nav-link"
             >
               {item}
@@ -29,13 +29,13 @@ export default function Footer() {
 
         <div className="text-center space-y-2">
           <p className="text-xs uppercase tracking-widest text-muted font-light">
-            Toronto, Ontario
+            Збараж, Україна
           </p>
           <p className="text-xs text-muted font-light">
             info@orhideiaphotostudio.com
           </p>
           <p className="text-xs text-muted font-light pt-4">
-            &copy; {new Date().getFullYear()} Orhideia Photo Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} Orhideia Photo Studio. Всі права захищені.
           </p>
         </div>
       </div>

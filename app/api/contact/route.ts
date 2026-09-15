@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     // Validate required fields
     if (!firstName || !lastName || !email || !phone || !sessionType || !referral) {
       return NextResponse.json(
-        { error: 'Please fill in all required fields' },
+        { error: 'Будь ласка, заповніть усі обов\'язкові поля' },
         { status: 400 }
       );
     }
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Please enter a valid email address' },
+        { error: 'Будь ласка, введіть дійсну email адресу' },
         { status: 400 }
       );
     }
@@ -41,56 +41,56 @@ export async function POST(request: Request) {
     const phoneRegex = /^[\d\s\-\+\(\)]{10,}$/;
     if (!phoneRegex.test(phone)) {
       return NextResponse.json(
-        { error: 'Please enter a valid phone number' },
+        { error: 'Будь ласка, введіть дійсний номер телефону' },
         { status: 400 }
       );
     }
 
     // Create email content
     const emailContent = `
-      <h2>New Contact Form Submission</h2>
+      <h2>Нове повідомлення з контактної форми</h2>
       
-      <h3>Contact Information</h3>
-      <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+      <h3>Контактна інформація</h3>
+      <p><strong>Ім'я:</strong> ${firstName} ${lastName}</p>
       <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
+      <p><strong>Телефон:</strong> ${phone}</p>
       
-      ${partnerFirst ? `<p><strong>Partner's Name:</strong> ${partnerFirst} ${partnerLast || ''}</p>` : ''}
+      ${partnerFirst ? `<p><strong>Ім'я партнера:</strong> ${partnerFirst} ${partnerLast || ''}</p>` : ''}
       
-      <h3>Session Details</h3>
-      <p><strong>Session Type:</strong> ${sessionType}</p>
-      ${date ? `<p><strong>Date:</strong> ${date}</p>` : ''}
-      <p><strong>How They Heard About You:</strong> ${referral}</p>
+      <h3>Деталі сеансу</h3>
+      <p><strong>Тип сеансу:</strong> ${sessionType}</p>
+      ${date ? `<p><strong>Дата:</strong> ${date}</p>` : ''}
+      <p><strong>Як про вас дізналися:</strong> ${referral}</p>
       
-      ${venue ? `<h3>Venue Information</h3><p>${venue}</p>` : ''}
+      ${venue ? `<h3>Інформація про майданчик</h3><p>${venue}</p>` : ''}
       
-      ${importance ? `<h3>Photography Importance</h3><p>${importance}</p>` : ''}
+      ${importance ? `<h3>Важливість фотографії</h3><p>${importance}</p>` : ''}
       
       <hr>
-      <p><em>This message was sent from the Orhideia Photography contact form.</em></p>
+      <p><em>Це повідомлення надіслано з контактної форми Orhideia Photography.</em></p>
     `;
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Orhideia Photography <onboarding@resend.dev>',
       to: 'ms3713287@gmail.com',
-      subject: `New Contact Form Submission from ${firstName} ${lastName}`,
+      subject: `Нове повідомлення з контактної форми від ${firstName} ${lastName}`,
       html: emailContent,
     });
 
     if (error) {
       console.error('Resend error:', error);
       return NextResponse.json(
-        { error: 'Failed to send message. Please try again.' },
+        { error: 'Не вдалося надіслати повідомлення. Спробуйте ще раз.' },
         { status: 500 }
       );
     }
 
-    return NextResponse.json({ success: true, message: 'Message sent successfully!' });
+    return NextResponse.json({ success: true, message: 'Повідомлення успішно надіслано!' });
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { error: 'An error occurred. Please try again.' },
+      { error: 'Сталася помилка. Спробуйте ще раз.' },
       { status: 500 }
     );
   }

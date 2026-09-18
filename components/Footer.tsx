@@ -32,7 +32,7 @@ export default function Footer() {
             Збараж, Україна
           </p>
           <p className="text-xs text-muted font-light">
-            info@orhideiaphotostudio.com
+            galynasovyk@gmail.com
           </p>
           <p className="text-xs text-muted font-light pt-4">
             &copy; {new Date().getFullYear()} Orhideia Photo Studio. Всі права захищені.

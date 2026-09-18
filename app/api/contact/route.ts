@@ -73,7 +73,7 @@ export async function POST(request: Request) {
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: 'Orhideia Photography <onboarding@resend.dev>',
-      to: 'ms3713287@gmail.com',
+      to: 'galynasovyk@gmail.com',
       subject: `Нове повідомлення з контактної форми від ${firstName} ${lastName}`,
       html: emailContent,
     });

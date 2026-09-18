@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
             <p style="color: #666; font-size: 14px; margin-top: 30px;">
               Orhideia Photo Studio<br>
               Збараж, Україна<br>
-              info@orhideiaphotostudio.com<br>
+              galynasovyk@gmail.com<br>
               +1 (416) 555-0123
             </p>
           </div>

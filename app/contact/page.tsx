@@ -38,7 +38,7 @@ export default function Contact() {
                   Збараж, Україна
                 </p>
                 <p className="text-xs text-muted font-light">
-                  info@orhideiaphotostudio.com
+                  galynasovyk@gmail.com
                 </p>
                 <p className="text-xs text-muted font-light">
                   +1 (416) 555-0123
@@ -68,7 +68,7 @@ export default function Contact() {
                       Email
                     </p>
                     <p className="font-serif text-gray-700 text-sm">
-                      info@orhideiaphotostudio.com
+                      galynasovyk@gmail.com
                     </p>
                   </div>
 

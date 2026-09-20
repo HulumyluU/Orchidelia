@@ -330,7 +330,7 @@ curl -X POST https://orhideia.netlify.app/api/book \
   -d '{
     "name": "Test User",
     "email": "test@example.com",
-    "phone": "+1 (416) 555-0000",
+    "phone": "+380971462799",
     "date": "2026-09-10",
     "time": "10:00",
     "serviceType": "Портретна фотографія",
@@ -351,7 +351,7 @@ curl -X POST https://orhideia.netlify.app/api/contact \
     "firstName": "Test",
     "lastName": "User",
     "email": "test@example.com",
-    "phone": "+1 (416) 555-0000",
+    "phone": "+380971462799",
     "sessionType": "Весільна фотографія",
     "referral": "Instagram"
   }'

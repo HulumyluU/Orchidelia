@@ -9,17 +9,17 @@ export default function Portfolio() {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-2 md:px-4 pb-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 md:gap-2 auto-rows-[250px] md:auto-rows-[300px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {placeholderImages.portfolio.map((item) => (
             <div
               key={item.id}
-              className={`relative overflow-hidden ${item.span}`}
+              className="relative overflow-hidden aspect-[3/4]"
             >
               <Image
                 src={item.image}
                 alt={item.alt}
                 fill
-                className="object-cover hover:scale-105 transition-transform duration-700"
+                className="object-contain hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>

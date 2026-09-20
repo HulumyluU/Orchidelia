@@ -3,6 +3,14 @@ import Link from 'next/link';
 import ImageCarousel from '@/components/ImageCarousel';
 import { placeholderImages } from '@/lib/placeholders';
 
+const videos = [
+  '/video1.mp4',
+  '/video2.mp4',
+  '/video3.mp4',
+  '/video4.mp4',
+  '/video5.mp4',
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white pt-[72px] md:pt-[80px]">
@@ -26,13 +34,35 @@ export default function Home() {
           4 липня 2026
         </p>
         <h2 className="text-xl md:text-2xl lg:text-3xl font-light uppercase tracking-widest text-gray-800 max-w-4xl mx-auto leading-relaxed">
-          Найкраща фотостудія в Збаражі
+          Фотостудія в Збаражі
         </h2>
       </section>
 
       {/* Carousel Section */}
       <section className="py-8 md:py-12">
         <ImageCarousel />
+      </section>
+
+      {/* Video Section */}
+      <section className="py-16 md:py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-light uppercase tracking-widest text-gray-800 text-center mb-12">
+            Наш процес роботи
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videos.map((video, index) => (
+              <div key={index} className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video
+                  src={video}
+                  controls
+                  className="w-full h-full object-cover"
+                >
+                  Ваш браузер не підтримує відео.
+                </video>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Brand Section */}

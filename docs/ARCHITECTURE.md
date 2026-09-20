@@ -231,7 +231,7 @@ Potential improvements:
 ## Contact Information
 
 - **Email**: galynasovyk@gmail.com
-- **Phone**: +1 (416) 555-0123
+- **Phone**: +380971462799
 - **Location**: Збараж, Україна
 - **Live URL**: https://orhideia.netlify.app
 - **GitHub**: https://github.com/HulumyluU/Orchidelia

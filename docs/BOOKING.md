@@ -138,7 +138,7 @@ Located below the form, displays:
 - Orhideia Photo Studio
 - Збараж, Україна
 - galynasovyk@gmail.com
-- +1 (416) 555-0123
+- +380971462799
 
 ### Confirmation Link
 Format: `${BASE_URL}/api/confirm-booking?token=${token}`

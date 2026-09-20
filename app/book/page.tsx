@@ -147,7 +147,7 @@ export default function Book() {
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 className="form-input"
-                placeholder="+1 (416) 555-0000"
+                placeholder="+380971462799"
               />
             </div>
 

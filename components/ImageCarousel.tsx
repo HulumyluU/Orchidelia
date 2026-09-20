@@ -26,13 +26,13 @@ export default function ImageCarousel() {
         {placeholderImages.carousel.map((image, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-[280px] md:w-[320px] lg:w-[360px] h-[420px] md:h-[480px] lg:h-[540px] relative"
+            className="flex-shrink-0 w-[280px] md:w-[320px] lg:w-[360px] aspect-[3/4] relative"
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover"
+              className="object-contain"
               sizes="(max-width: 768px) 280px, 360px"
             />
           </div>

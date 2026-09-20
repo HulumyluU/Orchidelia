@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
               Orhideia Photo Studio<br>
               Збараж, Україна<br>
               galynasovyk@gmail.com<br>
-              +1 (416) 555-0123
+              +380971462799
             </p>
           </div>
         `,

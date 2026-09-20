@@ -64,7 +64,7 @@ The page includes welcoming text emphasizing inclusivity and diversity:
 Located in the left column:
 - **Location**: Збараж, Україна
 - **Email**: galynasovyk@gmail.com
-- **Phone**: +1 (416) 555-0123
+- **Phone**: +380971462799
 
 ## Form Validation
 

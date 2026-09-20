@@ -2,6 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { placeholderImages } from '@/lib/placeholders';
 
+const videos = [
+  '/video1.mp4',
+  '/video2.mp4',
+  '/video3.mp4',
+];
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white pt-[72px] md:pt-[80px]">
@@ -22,7 +28,7 @@ export default function About() {
       </div>
 
       <div className="max-w-3xl mx-auto px-6 py-16 md:py-24">
-        <p className="section-label mb-8">Фотограф Збараж, Україна</p>
+        <p className="section-label mb-8">Фотограф Збараж</p>
         <h2 className="font-serif text-3xl md:text-4xl uppercase tracking-widest text-gray-800 text-center mb-12 font-normal">
           Наша історія
         </h2>
@@ -65,6 +71,26 @@ export default function About() {
           <Link href="/book" className="btn-primary inline-block">
             Забронювати сеанс
           </Link>
+        </div>
+
+        {/* Video Section */}
+        <div className="mt-24">
+          <h2 className="text-xl md:text-2xl font-light uppercase tracking-widest text-gray-800 text-center mb-12">
+            Наш процес роботи
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {videos.map((video, index) => (
+              <div key={index} className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
+                <video
+                  src={video}
+                  controls
+                  className="w-full h-full object-cover"
+                >
+                  Ваш браузер не підтримує відео.
+                </video>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

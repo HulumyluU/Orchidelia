@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -22,12 +23,15 @@ export default function Navigation() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex justify-between items-center py-5 md:py-6">
           <Link href="/" className="group flex-shrink-0">
-            <span className="font-script text-3xl md:text-4xl text-gray-900 leading-none block">
-              Orhideia
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.35em] text-gray-600 font-light ml-1 block mt-0.5">
-              Photography
-            </span>
+            <div className="relative w-32 md:w-40 h-12 md:h-16">
+              <Image
+                src="/logo.jpg"
+                alt="Orhideia Photography"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8 xl:gap-10">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -6,12 +7,14 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-16">
         <div className="text-center mb-10">
           <Link href="/" className="inline-block">
-            <span className="font-script text-4xl text-gray-900 leading-none block">
-              Orhideia
-            </span>
-            <span className="text-[9px] uppercase tracking-[0.35em] text-gray-600 font-light ml-1 block mt-1">
-              Photography
-            </span>
+            <div className="relative w-48 md:w-56 h-16 md:h-20 mx-auto">
+              <Image
+                src="/logo.jpg"
+                alt="Orhideia Photography"
+                fill
+                className="object-contain"
+              />
+            </div>
           </Link>
         </div>
 

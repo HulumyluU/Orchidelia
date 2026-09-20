@@ -13,13 +13,13 @@ export default function Portfolio() {
           {placeholderImages.portfolio.map((item) => (
             <div
               key={item.id}
-              className="relative overflow-hidden aspect-[3/4]"
+              className="relative overflow-hidden h-[400px] md:h-[450px]"
             >
               <Image
                 src={item.image}
                 alt={item.alt}
                 fill
-                className="object-contain hover:scale-105 transition-transform duration-700"
+                className="object-cover hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>

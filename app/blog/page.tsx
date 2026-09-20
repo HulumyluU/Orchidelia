@@ -51,12 +51,12 @@ export default function Blog() {
       <div className="max-w-[900px] mx-auto px-6 pb-20 space-y-16 md:space-y-24">
         {blogPosts.map((post, index) => (
           <article key={post.id} className="group cursor-pointer">
-            <div className="relative w-full aspect-[3/4] mb-8 overflow-hidden">
+            <div className="relative w-full h-[400px] md:h-[500px] mb-8 overflow-hidden">
               <Image
                 src={placeholderImages.blog[index]}
                 alt={post.title}
                 fill
-                className="object-contain group-hover:scale-105 transition-transform duration-700"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 900px"
               />
             </div>

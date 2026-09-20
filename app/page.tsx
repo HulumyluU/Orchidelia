@@ -54,7 +54,10 @@ export default function Home() {
               <div key={index} className="relative aspect-video bg-gray-100 rounded-lg overflow-hidden">
                 <video
                   src={video}
-                  controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="w-full h-full object-cover"
                 >
                   Ваш браузер не підтримує відео.

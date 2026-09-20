@@ -1,8 +1,8 @@
 export const placeholderImages = {
   hero: {
-    studio: '/main.jpeg',
-    wedding: '/main.jpeg',
-    about: '/main.jpeg',
+    studio: '/main.jpg',
+    wedding: '/main.jpg',
+    about: '/main.jpg',
   },
   carousel: [
     { src: '/img1.jpeg', alt: 'Photo studio session' },

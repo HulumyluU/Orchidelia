@@ -13,8 +13,7 @@ export default function Navigation() {
     { name: 'Головна', href: '/' },
     { name: 'Про нас', href: '/about' },
     { name: 'Портфоліо', href: '/portfolio' },
-    { name: 'Бронювання', href: '/book' },
-    { name: 'Контакти', href: '/contact' },
+    { name: 'Контакти', href: '/book' },
     { name: 'Блог', href: '/blog' },
   ];
 

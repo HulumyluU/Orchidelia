@@ -10,7 +10,7 @@ export const placeholderImages = {
     { src: '/img4.jpeg', alt: 'Photo studio session' },
     { src: '/img5.jpeg', alt: 'Photo studio session' },
     { src: '/img6.jpeg', alt: 'Photo studio session' },
-    { src: '/img7.jpeg', alt: 'Photo studio session' },
+    { src: '/main1.jpeg', alt: 'Photo studio session' },
   ],
   portfolio: [
     { id: 1, image: '/img8.jpeg', alt: 'Photo studio work' },

@@ -43,6 +43,14 @@ export default function Contact() {
                 <p className="text-xs text-muted font-light">
                   +380971462799
                 </p>
+                <a 
+                  href="https://www.instagram.com/orchid_studio_zbarazh/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-muted font-light hover:text-gray-900 transition-colors"
+                >
+                  @orchid_studio_zbarazh
+                </a>
               </div>
             </div>
 
@@ -88,6 +96,20 @@ export default function Contact() {
                     <p className="font-serif text-gray-700 text-sm">
                       9:00 - 17:00
                     </p>
+                  </div>
+
+                  <div className="border-b border-gray-100 pb-4">
+                    <p className="text-xs uppercase tracking-widest text-muted font-light mb-2">
+                      Instagram
+                    </p>
+                    <a 
+                      href="https://www.instagram.com/orchid_studio_zbarazh/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-serif text-gray-700 text-sm hover:text-gray-900 transition-colors"
+                    >
+                      @orchid_studio_zbarazh
+                    </a>
                   </div>
                 </div>
               </div>
